@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim and Kate Wedding</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/icon.jpg" type="image/png">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="lid one"></div>
+        <div class="lid two"></div>
+
+        <div class="envelope"></div>
+
+        <img class="letter" id="letter-1" src="images/letter-1.jpg" style="display: none;" />
+        <img class="letter" id="letter-2" src="images/letter-2.jpg" style="display: none;" />
+        <img class="letter" id="letter-3" src="images/letter-3.jpg" style="display: none;" />
+        <img class="letter" id="letter-4" src="images/letter-4.jpg" style="display: none;" />
+        <img class="letter" id="letter-5" src="images/letter-5.jpg" style="display: none;" />
+        <img class="letter" id="letter-6" src="images/letter-6.jpg" style="display: none;" />
+        <img class="letter" id="letter-7" src="images/letter-7.jpg" style="display: none;" />
+        <img class="letter" id="letter-8" src="images/letter-8.jpg" style="display: none;" />
+        <img class="letter" id="letter-9" src="images/letter-9.jpg" style="display: none;" />
+        <img class="letter" id="letter-10" src="images/letter-10.jpg" style="display: none;" />
+        <img class="letter" id="letter-11" src="images/letter-11.jpg" style="display: none;" />
+        <img class="letter" id="letter-12" src="images/letter-12.jpg" style="display: none;" />
+        <img class="letter" id="letter-13" src="images/letter-13.jpg" style="display: none;" />
+        <img class="letter" id="letter-14" src="images/letter-14.jpg" style="display: none;" />
+        <img class="letter" id="letter-15" src="images/letter-15.jpg" style="display: none;" />
+        <img class="letter" id="letter-16" src="images/letter-16.jpg" style="display: none;" />
+        <img class="letter" id="letter-17" src="images/letter-17.jpg" style="display: none;" />
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const inviteId = urlParams.get('inviteId');
+
+        const images = document.querySelectorAll('.letter');
+        images.forEach(image => {
+            image.style.display = 'none';
+        });
+
+        if (inviteId) {
+            const letterImage = document.getElementById('letter-' + inviteId);
+            if (letterImage) {
+                letterImage.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
